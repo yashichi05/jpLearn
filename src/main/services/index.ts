@@ -1,14 +1,14 @@
 import { ipcMain } from 'electron'
 import { Logger } from '../logger'
 import { BaseService } from './BaseService'
-import { FooService } from './FooService'
+import { WinService } from './WinService'
 import { INJECTIONS_SYMBOL } from './Service'
 
 /**
  * All services definition
  */
 export interface Services {
-  FooService: FooService,
+  WinService: WinService,
   BaseService: BaseService
 }
 
@@ -22,7 +22,7 @@ let _services!: Services
 export function initialize(logger: Logger) {
   _initialize({
     BaseService: new BaseService(logger),
-    FooService: new FooService(logger)
+    WinService: new WinService(logger)
   })
 }
 
