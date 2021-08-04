@@ -2,7 +2,7 @@
 header
   ul
     li(@click="openSetting") 設定
-  p jpLearn
+  p {{title}}
   ul.win-ctrl
     li(@click="minimize")
     li(@click="close")
@@ -26,7 +26,8 @@ export default {
     const openSetting = ()=>{
       setting.value = true
     }
-    return {close,minimize,openSetting,setting}
+
+    return {close,minimize,openSetting,setting,title:document.title}
   }
 }
 </script>
@@ -37,7 +38,7 @@ export default {
   position: fixed
   width: 100vw
   height: calc(100vh - 30px)
-  background: rgba(0,0,0,0.5)
+  background: rgba(0,0,0,0.3)
   display: flex
   align-items: center
   justify-content: center
