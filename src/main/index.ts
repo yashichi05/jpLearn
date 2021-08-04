@@ -20,11 +20,13 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
-    frame:false,
+    minWidth: 300,
+    minHeight: 300,
+    frame: false,
     webPreferences: {
       preload: indexPreload,
       contextIsolation: true,
-      nodeIntegration: false,
+      nodeIntegration: false
     },
     icon: logoUrl
   })

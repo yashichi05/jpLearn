@@ -1,8 +1,6 @@
 <template >
-  <div class="app">
     <WinHeader></WinHeader>
     <router-view> </router-view>
-  </div>
 </template>
 
 <script>
